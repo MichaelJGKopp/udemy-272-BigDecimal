@@ -43,5 +43,16 @@ public class Main {
       System.out.printf("%-14s %-15s %-8s %s%n",
         bd, bd.unscaledValue(), bd.scale(), bd.precision());
     }
+    
+    BigDecimal test1 = new BigDecimal("1.1111122222333334444455555");
+    BigDecimal test2 = BigDecimal.valueOf(1.1111122222333334444455555);
+    
+    System.out.println("---------------------------------");
+    System.out.printf("%-30s %-30s %-8s %s%n",
+      "Value", "Unscaled Value", "Scale", "Precision");
+      System.out.printf("%-30s %-30d %-8d %d%n",
+        test1, test1.unscaledValue(), test1.scale(), test1.precision());
+    System.out.printf("%-30s %-30d %-8d %d%n",
+      test2, test2.unscaledValue(), test2.scale(), test2.precision());
   }
 }
