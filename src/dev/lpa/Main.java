@@ -35,7 +35,7 @@ public class Main {
     }
     
     double[] doubles = {15.456, 8, 10000.000001, .123};
-    Arrays.setAll(bds, i -> new BigDecimal(doubles[i]));
+    Arrays.setAll(bds, i -> BigDecimal.valueOf(doubles[i]));
     System.out.println("---------------------------------");
     System.out.printf("%-14s %-15s %-8s %s%n",
       "Value", "Unscaled Value", "Scale", "Precision");
