@@ -33,5 +33,15 @@ public class Main {
       System.out.printf("%-14s %-15s %-8s %s%n",
         bd, bd.unscaledValue(), bd.scale(), bd.precision());
     }
+    
+    double[] doubles = {15.456, 8, 10000.000001, .123};
+    Arrays.setAll(bds, i -> new BigDecimal(doubles[i]));
+    System.out.println("---------------------------------");
+    System.out.printf("%-14s %-15s %-8s %s%n",
+      "Value", "Unscaled Value", "Scale", "Precision");
+    for (var bd : bds) {
+      System.out.printf("%-14s %-15s %-8s %s%n",
+        bd, bd.unscaledValue(), bd.scale(), bd.precision());
+    }
   }
 }
